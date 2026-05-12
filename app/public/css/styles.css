@@ -1,0 +1,137 @@
+:root {
+    --bg: #0f1115;
+    --bg-2: #141824;
+    --card: #1b2130;
+    --card-2: #232b3d;
+    --text: #e8ecf1;
+    --muted: #9aa7b4;
+    --primary: #4cc9f0;
+    --primary-2: #4895ef;
+    --accent: #f72585;
+    --success: #4ade80;
+    --warning: #f59e0b;
+    --shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: radial-gradient(1200px 600px at 20% -10%, #1a1f2f 0%, var(--bg) 40%),
+    radial-gradient(1200px 600px at 80% -10%, #1f2435 0%, var(--bg) 45%),
+    var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 16px 22px;
+    background: linear-gradient(145deg, var(--bg-2), #101320);
+    border: 1px solid #1f2536;
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26px;
+    letter-spacing: 0.5px;
+}
+
+header .btn {
+    margin-left: 8px;
+}
+
+main.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    padding: 26px;
+    background: linear-gradient(160deg, var(--card), var(--card-2));
+    border: 1px solid #2a334a;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border 0.2s ease;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.45);
+    border-color: #33415c;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 28px;
+    color: var(--primary);
+}
+
+p {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+form {
+    max-width: 420px;
+    margin: 20px auto;
+    padding: 26px;
+    background: linear-gradient(160deg, var(--card), #1b2030);
+    border: 1px solid #2a334a;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+input {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    background: #0f1320;
+    border: 1px solid #2a334a;
+    border-radius: 10px;
+    color: var(--text);
+    outline: none;
+    transition: border 0.2s ease;
+}
+
+input:focus {
+    border-color: var(--primary);
+}
+
+.btn, button {
+    display: inline-block;
+    padding: 10px 16px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-2));
+    color: #0b0f14;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.btn:hover, button:hover {
+    transform: translateY(-2px);
+    opacity: 0.92;
+}
+
+#msg {
+    text-align: center;
+    margin-top: 8px;
+    color: var(--warning);
+}

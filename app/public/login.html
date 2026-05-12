@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
+<h2>Iniciar Sesión</h2>
+<form id="loginForm">
+    <input type="text" name="username" placeholder="Usuario" required />
+    <input type="password" name="password" placeholder="Contraseña" required />
+    <button class="btn">Entrar</button>
+</form>
+<a class="btn" href="index.html">Volver al inicio</a>
+<p id="msg"></p>
+<script src="js/auth.js"></script>
 </body>
 </html>

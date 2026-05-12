@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Electrodomésticos</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+<header>
+    <h1>Catálogo de Electrodomésticos</h1>
+    <a class="btn" href="login.html">Iniciar sesión</a>
+    <a class="btn" href="register.html">Registro</a>
+</header>
 
+<main class="grid">
+    <div class="card" onclick="goTo('electrodomestico1.html')">Lavadora X100</div>
+    <div class="card" onclick="goTo('electrodomestico2.html')">Frigorífico CoolMax</div>
+    <div class="card" onclick="goTo('electrodomestico3.html')">Microondas QuickHeat</div>
+</main>
+
+<script src="js/main.js"></script>
 </body>
 </html>
